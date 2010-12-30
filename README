@@ -1,0 +1,9 @@
+<h3>How to convert</h3>
+$php zawgyi2unicode_cli.php zawgyi.sql unicode.sql
+
+<h3>How to use in code</h3>
+
+<code>
+require "zawgyi2unicode.php";
+$uni=zg_uni("Zawgyi text");
+</code>
