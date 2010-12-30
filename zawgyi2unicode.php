@@ -186,15 +186,224 @@ function zg_uni($txt)
 	
 	/////////////
 	/* pasint order , human error */
-	
+	$pattern[$j]="/([".unichr("1000")."-".unichr("1021")."])([".unichr("102C").unichr("102D").unichr("102E").unichr("1032").unichr("1036")."]){1,2}([".unichr("1060").unichr("1061").unichr("1062").unichr("1063").unichr("1065").unichr("1066").unichr("1067").unichr("1068").unichr("1069").unichr("1070").unichr("1071").unichr("1072").unichr("1073").unichr("1074").unichr("1075").unichr("1076").unichr("1077").unichr("1078").unichr("1079").unichr("107A").unichr("107B").unichr("107C").unichr("1085")."])/u";
+	$replacement[$j] = "$1$3$2";
+
+	$j++;
 	
 	//////////////
+	
+	$pattern[$j]="/".unichr("1064")."/u";
+	$replacement[$j] = unichr("1004").unichr("103A").unichr("1039");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("104E")."/u";
+	$replacement[$j] = unichr("104E").unichr("1004").unichr("103A").unichr("1038");
+	
+	$j++;
+
+	$pattern[$j]="/".unichr("1086")."/u";
+	$replacement[$j] = unichr("103F");
+	
+	$j++;
+	
+
+   	$pattern[$j]="/".unichr("1060")."/u";
+	$replacement[$j] = unichr("1039").unichr("1000");
+	
+	$j++;
+
+   	$pattern[$j]="/".unichr("1061")."/u";
+	$replacement[$j] = unichr("1039").unichr("1001");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1062")."/u";
+	$replacement[$j] = unichr("1039").unichr("1002");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1063")."/u";
+	$replacement[$j] = unichr("1039").unichr("1003");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1065")."/u";
+	$replacement[$j] = unichr("1039").unichr("1005");
+	
+	$j++;
+	
+	$pattern[$j]="/[".unichr("1066").unichr("1067")."]/u";
+	$replacement[$j] = unichr("1039").unichr("1006");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1068")."/u";
+	$replacement[$j] = unichr("1039").unichr("1007");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1069")."/u";
+	$replacement[$j] = unichr("1039").unichr("1008");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("106C")."/u";
+	$replacement[$j] = unichr("1039").unichr("100B");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1070")."/u";
+	$replacement[$j] = unichr("1039").unichr("100F");
+	
+	$j++;
+	
+	$pattern[$j]="/[".unichr("1071").unichr("1072")."]/u";
+	$replacement[$j] = unichr("1039").unichr("1010");
+	
+	$j++;
+	
+	$pattern[$j]="/[".unichr("1073").unichr("1074")."]/u";
+	$replacement[$j] = unichr("1039").unichr("1011");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1075")."/u";
+	$replacement[$j] = unichr("1039").unichr("1012");
+	
+	$j++;
+	
+	
+	$pattern[$j]="/".unichr("1076")."/u";
+	$replacement[$j] = unichr("1039").unichr("1013");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1077")."/u";
+	$replacement[$j] = unichr("1039").unichr("1014");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1078")."/u";
+	$replacement[$j] = unichr("1039").unichr("1015");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1079")."/u";
+	$replacement[$j] = unichr("1039").unichr("1016");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("107A")."/u";
+	$replacement[$j] = unichr("1039").unichr("1017");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("107B")."/u";
+	$replacement[$j] = unichr("1039").unichr("1018");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("107C")."/u";
+	$replacement[$j] = unichr("1039").unichr("1019");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1085")."/u";
+	$replacement[$j] = unichr("1039").unichr("101C");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("106D")."/u";
+	$replacement[$j] = unichr("1039").unichr("100C");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1091")."/u";
+	$replacement[$j] = unichr("100F").unichr("1039").unichr("100D");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1092")."/u";
+	$replacement[$j] = unichr("100B").unichr("1039").unichr("100C");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("1097")."/u";
+	$replacement[$j] = unichr("100B").unichr("1039").unichr("100B");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("106F")."/u";
+	$replacement[$j] = unichr("100E").unichr("1039").unichr("100D");
+	
+	$j++;
+	
+	$pattern[$j]="/".unichr("106E")."/u";
+	$replacement[$j] = unichr("100D").unichr("1039").unichr("100D");
+	
+	$j++;
+
+
+	$pattern[$j]="/(".unichr("103C").")([".unichr("1000")."-".unichr("1021")."])(".unichr("1039")."[".unichr("1000")."-".unichr("1021")."])/u";
+	$replacement[$j] = "$2$3$1";
+	
+	$j++;
+	
+	
+	$pattern[$j]="/(".unichr("103E").")?(".unichr("103D").")?([".unichr("103B").unichr("103C")."])/u";
+	$replacement[$j] = "$3$2$1";
+	
+	$j++;
+	
+	
+	$pattern[$j]="/(".unichr("103E").")(".unichr("103D").")([".unichr("103B").unichr("103C")."])/u";
+	$replacement[$j] = unichr("100D").unichr("1039").unichr("100D");
+	
+	$j++;
+	
+	
+	$pattern[$j]="/(".unichr("103E").")([".unichr("103B").unichr("103C")."])/u";
+	$replacement[$j] = "$2$1";
+	
+	$j++;
+	
+	$pattern[$j]="/(".unichr("103D").")([".unichr("103B").unichr("103C")."])/u";
+	$replacement[$j] = "$2$1";
+	
+	$j++;
+	
+	
+	//need to add 0 or wa
+	
+	// need to add 7 or ra
+	
+	//storage order rediner
+	$pattern[$j]="/(".unichr("1031").")?([".unichr("1000")."-".unichr("1021")."])(".unichr("1039")."[".unichr("1000")."-".unichr("1021")."])?([".unichr("102D").unichr("102E").unichr("1032")."])?([".unichr("1036").unichr("1037").unichr("1038")."]{0,2})([".unichr("103B")."-".unichr("103E")."]{0,3})([".unichr("102F").unichr("1030")."])?([".unichr("1036").unichr("1037").unichr("1038")."]{0,2})([".unichr("102D").unichr("102E").unichr("1032")."])?/u";
+	$replacement[$j] ="$2$3$6$1$4$9$7$5$8";
+	
+	$j++;
+	
+	$pattern[$j]="/".$ans.$u."/u";
+	$replacement[$j] = $u.$ans;
+	
+	$j++;
+
+	$pattern[$j]="/(".unichr("103A").")(".unichr("1037").")/u";
+	$replacement[$j] = "$2$1";
+	
+	$j++;
+
+   ///
 	$txt=preg_replace($pattern, $replacement, $txt);
 	
 	return $txt;
 	
 }
-$str="ျမန္";
+$str="သကၠရာဇ္ဆိုသည္မွာ အခ်ိန္ကာလကို အမွတ္အသား တစ္ခုအေနျဖင့္ သတ္မွတ္ထားေသာ စံတစ္ခုျဖစ္ေပသည္။ အခ်ိန္(၂၄)နာရီကို တစ္ရက္အျဖစ္ သတ္မွတ္ၿပီး ရက္ေပါင္း (၃၆၅)ရက္ကို တစ္ႏွစ္ဟု သတ္မွတ္သည္။ တစ္ႏွစ္ကို သကၠရာဇ္တစ္ဟု သတ္မွတ္ၾကသည္။ ကမၻာမွာ သကၠရာဇ္မ်ားကို ေလ့လာလ်င္ သကၠရာဇ္ ငါးမ်ိဳး ရွိေၾကာင္း ေတြ႕ရပါသည္။";
+
 echo "<font style='font-family:zawgyi-one'>".$str."</font><br/>";
+echo "<h3>converted</h3>";
 echo zg_uni($str);
 ?>
