@@ -40,7 +40,7 @@ function zg_uni($txt)
 	
 	$j++;
 	
-	$pattern[$j]="/".unichr("1025")."(?=(".unichr("1039")."|".unichr("102C")."))/u";
+	$pattern[$j]="/".unichr("1025")."(?=[".unichr("1039").unichr("102C")."])/u";
 	$replacement[$j] = unichr("1009");
 
 	$j++;
@@ -80,23 +80,24 @@ function zg_uni($txt)
 	
 	$j++;
 	
-	$pattern[$j]="/(".unichr("103D")."|".unichr("1087").")/u";
+	$pattern[$j]="/[".unichr("103D").unichr("1087")."]/u";
 	$replacement[$j] = $ha;
 	
 	$j++;
 
 	$pattern[$j]="/".unichr("103C")."/u";
+	
 	$replacement[$j] = $wa;
 	
 	$j++;
 	
-	$pattern[$j]="/(".unichr("103B")."|".unichr("107E")."|".unichr("107F")."|".unichr("1080")."|".unichr("1081")."|".unichr("1082")."|".unichr("1083")."|".unichr("1084").")/u";
+	$pattern[$j]="/[".unichr("103B").unichr("107E").unichr("107F").unichr("1080").unichr("1081").unichr("1082").unichr("1083").unichr("1084")."]/u";
 	$replacement[$j] = $ra;
 	
 	$j++;
 	
 	
-	$pattern[$j]="/(".unichr("103A")."|".unichr("107D").")/u";
+	$pattern[$j]="/[".unichr("103A").unichr("107D")."]/u";
 	$replacement[$j] = $ya;
 	
 	$j++;
@@ -110,7 +111,7 @@ function zg_uni($txt)
 	$replacement[$j] = $wa.$ha;
 	
 	$j++;
-	
+
 	$pattern[$j]="/".unichr("103E").unichr("103D")."/u";
 	$replacement[$j] = $wa.$ha;
 	$j++;
@@ -185,7 +186,7 @@ function zg_uni($txt)
 	$j++;
 	
 	/////////////
-	/* pasint order , human error */
+	//pasint order , human error
 	$pattern[$j]="/([".unichr("1000")."-".unichr("1021")."])([".unichr("102C").unichr("102D").unichr("102E").unichr("1032").unichr("1036")."]){1,2}([".unichr("1060").unichr("1061").unichr("1062").unichr("1063").unichr("1065").unichr("1066").unichr("1067").unichr("1068").unichr("1069").unichr("1070").unichr("1071").unichr("1072").unichr("1073").unichr("1074").unichr("1075").unichr("1076").unichr("1077").unichr("1078").unichr("1079").unichr("107A").unichr("107B").unichr("107C").unichr("1085")."])/u";
 	$replacement[$j] = "$1$3$2";
 
@@ -346,17 +347,18 @@ function zg_uni($txt)
 	$j++;
 
 
-	$pattern[$j]="/(".unichr("103C").")([".unichr("1000")."-".unichr("1021")."])(".unichr("1039")."[".unichr("1000")."-".unichr("1021")."])/u";
-	$replacement[$j] = "$2$3$1";
+	$pattern[$j]="/(".unichr("103C").")([".unichr("1000")."-".unichr("1021")."])("."[".unichr("1000")."-".unichr("1021")."])/u";
+	$replacement[$j] = "$2$1$3";
+	
 	
 	$j++;
 	
 	
-	$pattern[$j]="/(".unichr("103E").")?(".unichr("103D").")?([".unichr("103B").unichr("103C")."])/u";
-	$replacement[$j] = "$3$2$1";
+	//$pattern[$j]="/(".unichr("103E").")?(".unichr("103D").")?([".unichr("103B").unichr("103C")."])/u";
+	//$replacement[$j] = "$3$2$1";
 	
-	$j++;
-	
+	//$j++;
+
 	
 	$pattern[$j]="/(".unichr("103E").")(".unichr("103D").")([".unichr("103B").unichr("103C")."])/u";
 	$replacement[$j] = unichr("100D").unichr("1039").unichr("100D");
@@ -364,11 +366,11 @@ function zg_uni($txt)
 	$j++;
 	
 	
-	$pattern[$j]="/(".unichr("103E").")([".unichr("103B").unichr("103C")."])/u";
+	/*$pattern[$j]="/(".unichr("103E").")([".unichr("103B").unichr("103C")."])/u";
 	$replacement[$j] = "$2$1";
 	
 	$j++;
-	
+	*/
 	$pattern[$j]="/(".unichr("103D").")([".unichr("103B").unichr("103C")."])/u";
 	$replacement[$j] = "$2$1";
 	
