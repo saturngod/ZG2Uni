@@ -347,9 +347,8 @@ function zg_uni($txt)
 	$j++;
 
 
-	$pattern[$j]="/(".unichr("103C").")([".unichr("1000")."-".unichr("1021")."])("."[".unichr("1000")."-".unichr("1021")."])/u";
+	$pattern[$j]="/(".unichr("103C").")([".unichr("1000")."-".unichr("1021")."])/u";
 	$replacement[$j] = "$2$1$3";
-	
 	
 	$j++;
 	
