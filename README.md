@@ -1,3 +1,6 @@
+Algorithm from solveware solution javascript.
+http://paragu.parabaik.info/
+
 How to convert
 ===============
     $php zawgyi2unicode_cli.php zawgyi.sql unicode.sql
