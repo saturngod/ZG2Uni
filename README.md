@@ -1,10 +1,12 @@
-Algorithm from solveware solution javascript.
+Written By Saturngod
+
+Zawgyi to Unicode Algorithm from solveware solution javascript.
 http://paragu.parabaik.info/
 
 Setup
 ======
   
-How to check php.ini
+check php.ini
 
 	$php --ini
 
@@ -34,12 +36,13 @@ How to convert (normal)
     $php zawgyi2unicode_cli.php zawgyi.sql > unicode.sql
     
 
-How to convert (*nix)
+How to convert (*nix OS and Mac OSX)
 ========================
 	$php zg2uni_unix.php zawgyi.sql > unicode.sql
 
-How to use in code
-===================
+How to use in coding
+====================
 
     require "zawgyi2unicode.php";
-    $uni=zg_uni("Zawgyi text");
+    $conv=new ZG2Uni();
+    echo $conv->zg_uni($conv->html_decode($zawgyi)); 

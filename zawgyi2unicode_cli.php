@@ -9,24 +9,13 @@ if(count($argv) == 2)
 		
 		$data="";
 		
-		//$myFile = $argv[2];
-		//$fh = fopen($myFile, 'w') or die("can't open file");
-
+		$conv=new ZG2Uni();
+		//$conv->start_log();
+	
 		$handle = @fopen($filename, "r");
 		if ($handle) {
 			while (($buffer = fgets($handle, filesize($filename))) !== false) {
-				if($data!="")
-				{
-					$data= zg_uni(conv($buffer));
-					//fwrite($fh, $data);
-					echo $data;
-				}
-				else
-				{
-					$data= zg_uni(conv($buffer));
-					//fwrite($fh, $data);
-					echo $data;
-				}
+					echo $conv->zg_uni($conv->html_decode($buffer)); 
 			}
 			if (!feof($handle)) {
 				echo "Error: unexpected fgets() fail\n";
@@ -35,5 +24,10 @@ if(count($argv) == 2)
 		}
 	
 	}
+	//endlog
+}
+else
+{
+	echo "only 2 argument";
 }
 ?>
